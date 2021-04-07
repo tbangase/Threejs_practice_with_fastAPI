@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Test Canvas</title>
+<link rel="stylesheet" href="../static/css/style.css">
+{% endblock title %}
+
+{% block content %}
+<script type="module" src="{{ url_for('static', path='/build/basicElementsOfScene.js') }}"></script>
+
+<br>
+<div><h1>Test Canvas</h1></div>
+
+<canvas id="canvas"></canvas>
+<div id="Stats-output"></div>
+<div id="GUI-Container"></div>
+
+{% endblock content %}

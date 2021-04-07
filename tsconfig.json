@@ -1,0 +1,26 @@
+//Settings for VSCode
+{
+    "compilerOptions": {
+      // strictをtrueにすると以下が全部指定されます
+      //   "noImplicitAny": true       // 型推論などで型が決められないときに暗黙的にany扱いにするのを許さない。
+      //   "noImplicitThis": true      // 上記のthis版です。
+      //   "alwaysStrict": true        // "use strict"が書かれてなくても、書いてあったことにしてコンパイルします。
+      //   "strictNullChecks": true    // nullやundefinedが型定義で指定されてないと、それらの代入を禁止する。必須。
+      //   "strictFunctionTypes": true // 後述の、型チェックが「双変性」で緩くなってるのを厳しくします。
+      "strict": true, 
+      "noImplicitReturns": true,       // JSでreturnを書かないとundefinedが返りますが、返り値がvoidでなければそういうパターンを許さず明示的に書くことを強制します。
+      "noUnusedLocals": true,          // 未使用の変数を警告します。
+      "noUnusedParameters": true,      // 未使用の引数を警告します。2番目以降の引数だけ使いたいようなときは、使わない引数名を `_` から始めると警告が消えます。
+                                       // （未使用系は以前はコンパイルエラーでしたが、少なくとも2.6では警告だけになっています。書きかけのコードも実行できて便利。）
+      "target": "es5",                 // もうIE10〜で大丈夫でしょ・・？
+      "jsx": "react",                  // React使う場合は指定します。
+      "lib": [                         // ECMAScript標準やdomの型定義を入れます。
+        "dom",                         // ブラウザ向けのコードなのでdomを入れます。
+        "es5",                         // "target": "es5" に合わせて入れます。
+        "es2015.promise"               // Polyfillを自分で入れたとき、型定義を1機能ずつ増やすこともできます。
+      ],                               // 使えるlibの一覧はcompiler-optionsのページに書かれています。
+      "rootDir": "./",
+      "outDir": "./static/",
+    },
+    "exclude": ["node_modules"]
+  }

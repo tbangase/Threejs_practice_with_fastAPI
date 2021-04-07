@@ -1,0 +1,25 @@
+{
+    "name": "my_first_project-package",
+    "description": "my first package ever",
+    "license": "MIT",
+    "version": "1.0.0",
+    "main": "./build/myFirstProject.js",
+    "scripts": {
+        "start": "node ./build/myFirstProject.js"
+    },
+    "dependencies": {
+        "@types/dat.gui": "^0.7.6",
+        "@types/jquery": "^3.5.5",
+        "@types/stats": "^0.16.30",
+        "@types/three": "^0.126.1",
+        "dat.gui": "^0.7.7",
+        "jquery": "^3.6.0",
+        "node": "^15.10.0",
+        "stats": "^1.0.0",
+        "stats-js": "^1.0.1",
+        "three": "^0.126.1"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.35"
+    }
+}
